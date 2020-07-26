@@ -31,7 +31,7 @@ object QuaeroAssignmentService {
 
     //Extract Customer details from kafka source
     val customerDS = kafkaSourceDS
-      .map{json =>
+      .map { json =>
         extractJSONToObject[JSONRoot](json)
           .root
           .cust_info

@@ -15,7 +15,7 @@ object HiveSource {
     * @tparam T
     * @return
     */
-  def load[T](tableName: String, dataBase: String)(implicit spark: SparkSession, encoder: Encoder[T]): Dataset[T] ={
+  def load[T](tableName: String, dataBase: String)(implicit spark: SparkSession, encoder: Encoder[T]): Dataset[T] = {
     spark
       .table(s"$dataBase.$tableName").as[T]
   }

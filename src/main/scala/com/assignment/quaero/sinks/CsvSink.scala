@@ -22,7 +22,7 @@ object CsvSink {
                charset: String = "UTF-8",
                header: Boolean = false,
                delimiter: String = ","
-          ): Unit = {
+             ): Unit = {
     dataset.write
       .option("header", header.toString)
       .option("charset", charset)

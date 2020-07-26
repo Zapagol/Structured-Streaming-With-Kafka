@@ -14,11 +14,11 @@ object QuaeroBridger {
     * @return
     */
   def customerEmailMappingBridger(customerDS: Dataset[Customer],
-                                  emailMappingsDS: Dataset[EmailMappings])(implicit spark: SparkSession): Dataset[CustomerEmailDetails] ={
+                                  emailMappingsDS: Dataset[EmailMappings])(implicit spark: SparkSession): Dataset[CustomerEmailDetails] = {
     import spark.implicits._
     customerDS
       .join(emailMappingsDS, Seq("customer_id"), "inner")
-      .select( $"email", $"attribute_name", $"attribute_value")
+      .select($"email", $"attribute_name", $"attribute_value")
       .as[CustomerEmailDetails]
   }
 }

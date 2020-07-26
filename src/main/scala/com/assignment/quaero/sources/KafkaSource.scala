@@ -16,7 +16,6 @@ object KafkaSource {
     * @param subscribe
     * @param includeHeaders
     * @param pollTimeout
-    *
     * @return
     */
   def load(bootStrapServers: String,

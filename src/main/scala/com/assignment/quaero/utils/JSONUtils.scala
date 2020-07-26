@@ -12,7 +12,7 @@ object JSONUtils {
     * @tparam T
     * @return
     */
-  def extractJSONToObject[T](json: String)(implicit m: Manifest[T]): T ={
+  def extractJSONToObject[T](json: String)(implicit m: Manifest[T]): T = {
     implicit val formats = DefaultFormats
     // convert a String to a JValue object
     val jValue = parse(json)
