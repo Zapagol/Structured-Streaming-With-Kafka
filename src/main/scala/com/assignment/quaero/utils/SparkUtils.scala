@@ -8,7 +8,7 @@ trait SparkUtils {
     .builder()
     .appName("Quaero Assignment")
     .master("local[*]")
+    .enableHiveSupport()
     .getOrCreate()
-
 
 }
