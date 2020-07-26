@@ -74,6 +74,7 @@ Provided input JSON is not in a valid format and hence I am assuming Kafka Sourc
     email_id1,"attribute_name1 = attribute_value1,attribute_name2 = attribute_value2"
     email_id2,attribute_name1 = attribute_value1
 ```
+[Generated out.csv file](https://github.com/Zapagol/Quaero/blob/master/out.csv/part-00000-25dbe607-b7ea-4968-9e3e-1035df5c8320-c000.csv)
 ### Generate Fat jar using sbt assembly
 
 ```
