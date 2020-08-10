@@ -54,7 +54,7 @@ object CsvSink {
                      header: Boolean = false,
                      delimiter: String = ","
                    ): Unit = {
-    dataFrame.write
+    dataFrame.writeStream
       .option("header", header.toString)
       .option("charset", charset)
       .option("sep", delimiter)
@@ -63,6 +63,7 @@ object CsvSink {
       .option("ignoreTrailingWhiteSpace", "false")
       .mode(saveMode)
       .csv(intermediateLocation)
+      .start()
 
   }
 }
