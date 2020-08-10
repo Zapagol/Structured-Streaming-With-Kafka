@@ -25,7 +25,7 @@ object KafkaSource {
            pollTimeout: Int = 512)(implicit spark: SparkSession): Dataset[String] = {
 
     import spark.implicits._
-    spark.read
+    spark.readStream
       .format("kafka")
       .option("kafka.bootstrap.servers", bootStrapServers)
       .option(subscribe, topicName)
